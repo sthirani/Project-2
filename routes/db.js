@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
     client.connect(function (err) {
         if (err)
         {
-            console.log(err.message)
+            console.log("Sonal Thirani")
         }
 
         client.query("Select * from test_table",function (err, result) {
@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
 
             { console.log("Here are we")
                 console.log(result.rows);
-                res.render('/db', {results: result.rows}
+                res.render('pages/db', {results: result.rows}
                 );
             }
         })
